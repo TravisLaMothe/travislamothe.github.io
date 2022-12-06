@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Fancify Shamcify</title>
+		<script src="./js/fancifymytext.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<h1>Fancify my Text</h1>
+		<!-- Your UI controls go here -->
+		<fieldset>
+			<legend>Text</legend>
+
+			<label for="fancifyTextArea">Text:</label>
+			<textarea id="fancifyTextArea" rows="4" cols="30">This is example text. Try out the controls. It's fun!</textarea> 
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Fancify</legend>
+			<form>
+				<button type="button" onclick="enlargeButton()">Bigger!</button>
+
+				<label for="fancyRadio">FancyShmancy</label>
+				<input type="radio" id="fancyRadio" name="textsettings" onchange="fancifyText()">
+  				
+				<label for="boringRadio">BoringBetty</label>
+				<input type="radio" id="boringRadio" name="textsettings" onchange="unfancifyText()" checked="checked">
+
+				<button type="button" onclick="mooFunction()">Moo</button>
+			</form>
+		</fieldset>
+
+		<!-- <script src="/js/fancifymytext.js"></script> -->
+	</body>
+</html>
