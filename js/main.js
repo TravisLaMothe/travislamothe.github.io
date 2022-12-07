@@ -19,12 +19,12 @@ function init() {
 function assignmentClicked(className, assignmentNum) {
     let storageId = className + '-' + assignmentNum; 
     
-    const clickCount = localStorage.getItem(storageId);
+    const clickCount = sessionStorage.getItem(storageId);
 
     if (clickCount != null) {
-        localStorage.setItem(storageId, parseInt(clickCount) + 1);
+        sessionStorage.setItem(storageId, parseInt(clickCount) + 1);
     } else {
-        localStorage.setItem(storageId, 0);
+        sessionStorage.setItem(storageId, 0);
     }
 
     getAssignmentClickCount(false);
@@ -37,7 +37,7 @@ function getAssignmentClickCount(firstTime) {
         
         var test = innerHyper.innerHTML.split(" - (");
         var assignmentNum = test[0];
-        var numOfClicks = localStorage.getItem(className + '-' + assignmentNum);
+        var numOfClicks = sessionStorage.getItem(className + '-' + assignmentNum);
         if (numOfClicks == null)
             numOfClicks = 0;
 
