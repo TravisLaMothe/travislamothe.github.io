@@ -20,7 +20,7 @@ function assignmentClicked(className, assignmentNum) {
     let storageId = className + '-' + assignmentNum; 
     
     const clickCount = sessionStorage.getItem(storageId);
-
+    console.log(storageId + ": " + clickCount);
     if (clickCount != null) {
         sessionStorage.setItem(storageId, parseInt(clickCount) + 1);
     } else {
