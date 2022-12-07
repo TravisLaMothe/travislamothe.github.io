@@ -43,6 +43,8 @@ function getAssignmentClickCount(firstTime) {
 
         innerHyper.innerHTML = test[0] + " - ("+numOfClicks+")";
 
+        console.log("here");
+
         if (firstTime) {
             assignment.addEventListener("click", function() {assignmentClicked(className, assignmentNum)});
         }
