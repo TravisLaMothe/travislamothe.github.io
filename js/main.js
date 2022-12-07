@@ -20,7 +20,7 @@ function assignmentClicked(className, assignmentNum) {
     let storageId = className + '-' + assignmentNum; 
     
     const clickCount = localStorage.getItem(storageId);
-    console.log(clickCount);
+
     if (clickCount != null) {
         localStorage.setItem(storageId, parseInt(clickCount) + 1);
     } else {
@@ -45,7 +45,6 @@ function getAssignmentClickCount(firstTime) {
 
         if (firstTime) {
             assignment.addEventListener("click", function() {assignmentClicked(className, assignmentNum)});
-            assignment.addEventListener("rightclick", function() {assignmentClicked(className, assignmentNum)});
         }
     });
 }
